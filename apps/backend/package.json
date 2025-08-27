@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.50",
+  "prisma": {
+    "seed": "bun run prisma/seed.ts"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "db:seed": "bunx prisma db seed"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.14.0",
+    "elysia": "latest",
+    "zod": "^4.1.3"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "prisma": "^6.14.0"
+  },
+  "module": "src/index.js"
+}
