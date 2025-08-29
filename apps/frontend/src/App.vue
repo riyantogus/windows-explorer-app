@@ -1,11 +1,19 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import { SidebarInset, SidebarProvider, SidebarTrigger } from './components/ui/sidebar';
+import AppSidebar from '@/components/layouts/AppSidebar.vue'
+import FileExplorerPanel from '@/components/FileExplorerPanel.vue';
 </script>
 
 <template>
-  <header>
-    <div class="flex items-center justify-center min-h-screen">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+  <SidebarProvider>
+    <AppSidebar />
+    <SidebarInset>
+      <header class="flex h-16 shrink-0 items-center gap-2 border-b px-4">
+        <SidebarTrigger class="-ml-1" />
+      </header>
+      <div class="flex flex-1 flex-col gap-4 p-4">
+        <FileExplorerPanel />
+      </div>
+    </SidebarInset>
+  </SidebarProvider>
 </template>
