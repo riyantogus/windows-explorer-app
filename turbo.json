@@ -12,6 +12,15 @@
     "test": {
       "dependsOn": ["build"]
     },
+    "prisma:generate": {
+      "outputs": []
+    },
+    "prisma:migrate": {
+      "outputs": []
+    },
+    "db:seed": {
+      "outputs": []
+    },
     "lint": {
       "outputs": []
     },

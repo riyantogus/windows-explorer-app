@@ -12,7 +12,10 @@
     "lint": "turbo lint",
     "clean": "turbo clean && rm -rf node_modules",
     "dev:backend": "cd apps/backend && bun run dev",
-    "dev:frontend": "cd apps/frontend && bun run dev"
+    "dev:frontend": "cd apps/frontend && bun run dev",
+    "prisma:generate": "bun run turbo run prisma:generate",
+    "prisma:migrate": "bun run turbo run prisma:migrate",
+    "db:seed": "bun run turbo run db:seed"
   },
   "devDependencies": {
     "turbo": "^2.5.6"
