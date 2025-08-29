@@ -1,0 +1,26 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "test": "turbo test",
+    "lint": "turbo lint",
+    "clean": "turbo clean && rm -rf node_modules",
+    "dev:backend": "cd apps/backend && bun run dev",
+    "dev:frontend": "cd apps/frontend && bun run dev"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.6"
+  },
+  "packageManager": "bun@1.0.0",
+  "dependencies": {
+    "@emnapi/core": "^1.4.5",
+    "@emnapi/runtime": "^1.4.5",
+    "@tybys/wasm-util": "^0.10.0"
+  }
+}
